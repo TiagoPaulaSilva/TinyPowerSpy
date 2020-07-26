@@ -10025,7 +10025,7 @@ type 0207, grid 2.5 mm</description>
 <text x="-0.0508" y="1.016" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-0.0508" y="-2.2352" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
-<package name="0207/5V" urn="urn:adsk.eagle:footprint:22995/1">
+<package name="0207/5V" urn="urn:adsk.eagle:footprint:22995/1" locally_modified="yes">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
 type 0207, grid 5 mm</description>
 <wire x1="-2.54" y1="0" x2="-0.889" y2="0" width="0.6096" layer="51"/>
@@ -10033,8 +10033,8 @@ type 0207, grid 5 mm</description>
 <wire x1="0.889" y1="0" x2="2.54" y2="0" width="0.6096" layer="51"/>
 <circle x="-2.54" y="0" radius="1.27" width="0.1016" layer="21"/>
 <circle x="-2.54" y="0" radius="1.016" width="0.1524" layer="51"/>
-<pad name="1" x="-2.54" y="0" drill="0.8128" shape="octagon"/>
-<pad name="2" x="2.54" y="0" drill="0.8128" shape="octagon"/>
+<pad name="1" x="-2.54" y="0" drill="1" shape="octagon"/>
+<pad name="2" x="2.54" y="0" drill="1" shape="octagon"/>
 <text x="-1.143" y="0.889" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-1.143" y="-2.159" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
@@ -12824,6 +12824,12 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </technologies>
 </device>
 </devices>
+<spice>
+<pinmapping spiceprefix="R">
+<pinmap gate="G$1" pin="1" pinorder="1"/>
+<pinmap gate="G$1" pin="2" pinorder="2"/>
+</pinmapping>
+</spice>
 </deviceset>
 </devicesets>
 </library>
@@ -28042,22 +28048,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <package name="SMD1,27-2,54" urn="urn:adsk.eagle:footprint:30822/1" locally_modified="yes">
 <description>&lt;b&gt;SMD PAD&lt;/b&gt;</description>
 <smd name="1" x="0" y="0" dx="6" dy="6" layer="1"/>
-<pad name="GND1" x="-2.2352" y="2.2098" drill="0.6"/>
-<pad name="GND2" x="-0.7112" y="2.2098" drill="0.6"/>
-<pad name="GND3" x="0.8128" y="2.2098" drill="0.6"/>
-<pad name="GND4" x="2.2098" y="2.2098" drill="0.6"/>
-<pad name="GND5" x="-2.2352" y="0.7112" drill="0.6"/>
-<pad name="GND6" x="-0.7112" y="0.7112" drill="0.6"/>
-<pad name="GND7" x="0.8128" y="0.7112" drill="0.6"/>
-<pad name="GND8" x="2.2098" y="0.7112" drill="0.6"/>
-<pad name="GND9" x="-2.2098" y="-0.7112" drill="0.6"/>
-<pad name="GND10" x="-0.6858" y="-0.7112" drill="0.6"/>
-<pad name="GND11" x="0.8382" y="-0.7112" drill="0.6"/>
-<pad name="GND12" x="2.2352" y="-0.7112" drill="0.6"/>
-<pad name="GND13" x="-2.1844" y="-2.1082" drill="0.6"/>
-<pad name="GND14" x="-0.6604" y="-2.1082" drill="0.6"/>
-<pad name="GND15" x="0.8636" y="-2.1082" drill="0.6"/>
-<pad name="GND16" x="2.2606" y="-2.1082" drill="0.6"/>
 </package>
 <package name="SMD2,54-5,08" urn="urn:adsk.eagle:footprint:30823/1" locally_modified="yes">
 <description>&lt;b&gt;SMD PAD&lt;/b&gt;</description>
@@ -28217,8 +28207,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3"/>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3"/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2"/>
-<part name="B1" library="rectifier" library_urn="urn:adsk.eagle:library:336" deviceset="MB*S" device="" package3d_urn="urn:adsk.eagle:package:23902/1" technology="6"/>
-<part name="R4" library="resistor pot" deviceset="R-EU_" device="0207/5V" package3d_urn="urn:adsk.eagle:package:20339653/2" value="10R x 1W">
+<part name="B1" library="rectifier" library_urn="urn:adsk.eagle:library:336" deviceset="MB*S" device="" package3d_urn="urn:adsk.eagle:package:23902/1" override_package3d_urn="urn:adsk.eagle:package:22220019/2" override_package_urn="urn:adsk.eagle:footprint:23861/1" technology="6"/>
+<part name="R4" library="resistor pot" deviceset="R-EU_" device="0207/5V" package3d_urn="urn:adsk.eagle:package:20339653/2" override_package3d_urn="urn:adsk.eagle:package:22220755/2" override_package_urn="urn:adsk.eagle:footprint:22995/1" override_locally_modified="yes" value="10R x 1W">
+<spice>
+<pinmapping spiceprefix="R">
+<pinmap gate="G$1" pin="1" pinorder="1"/>
+<pinmap gate="G$1" pin="2" pinorder="2"/>
+</pinmapping>
+</spice>
 <attribute name="PN" value=" AC01000008208JACCS"/>
 </part>
 <part name="SUPPLY23" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+4.1V" device="" value="5V"/>
@@ -28393,9 +28389,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </part>
 <part name="C8" library="rcl" deviceset="C-US" device="C1206K" package3d_urn="urn:adsk.eagle:package:23682/2" value="100uF x 6.3V"/>
 <part name="C5" library="rcl" deviceset="C-US" device="C1206K" package3d_urn="urn:adsk.eagle:package:23682/2" value="100uF x 6.3V"/>
-<part name="L1" library="rc-master-smd" deviceset="L_" device="0603" value="22uH"/>
-<part name="U3" library="ACS712" deviceset="ACS712ELCTR-20A-T" device="" value="ACS712"/>
-<part name="F1" library="Fuse SMD" deviceset="0154004.DR" device="" value="250mA"/>
+<part name="L1" library="rc-master-smd" deviceset="L_" device="0603" override_package3d_urn="urn:adsk.eagle:package:22220031/2" override_package_urn="urn:adsk.eagle:footprint:22220032/1" value="22uH"/>
+<part name="U3" library="ACS712" deviceset="ACS712ELCTR-20A-T" device="" override_package3d_urn="urn:adsk.eagle:package:22219930/2" override_package_urn="urn:adsk.eagle:footprint:22219931/1" value="ACS712"/>
+<part name="F1" library="Fuse SMD" deviceset="0154004.DR" device="" override_package3d_urn="urn:adsk.eagle:package:22220010/2" override_package_urn="urn:adsk.eagle:footprint:22220011/1" value="250mA"/>
 <part name="C2" library="rcl" deviceset="CPOL-EU" device="E3.5-8" package3d_urn="urn:adsk.eagle:package:23360/2"/>
 <part name="U4" library="linear" deviceset="LMV321?*" device="M5" package3d_urn="urn:adsk.eagle:package:16456/2" value="LMV321"/>
 <part name="U5" library="linear" deviceset="LMV321?*" device="M5" package3d_urn="urn:adsk.eagle:package:16456/2" value="LMV321"/>
@@ -28433,8 +28429,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="0V" device=""/>
 <part name="SUPPLY4" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+4.1V" device="" value="3.3V"/>
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+4.1V" device="" value="3.3V"/>
-<part name="L2" library="nrf52832-breakout-temp" deviceset="INDUCTOR" device="-0402-3.9NH" value="3.9nH"/>
-<part name="J2" library="SparkFun-Connectors" deviceset="CORTEX_DEBUG" device="PTH" value="CORTEX_DEBUGPTH"/>
+<part name="L2" library="nrf52832-breakout-temp" deviceset="INDUCTOR" device="-0402-3.9NH" override_package3d_urn="urn:adsk.eagle:package:22220041/2" override_package_urn="urn:adsk.eagle:footprint:22220042/1" value="3.9nH"/>
+<part name="J2" library="SparkFun-Connectors" deviceset="CORTEX_DEBUG" device="PTH" override_package3d_urn="urn:adsk.eagle:package:22220046/2" override_package_urn="urn:adsk.eagle:footprint:22220047/1" value="CORTEX_DEBUGPTH"/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="0V" device=""/>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="0V" device=""/>
 <part name="C16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="6 pF"/>
@@ -28485,9 +28481,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </spice>
 <attribute name="PN" value="RC0603DR-07200KL"/>
 </part>
-<part name="U6" library="nrf52832-breakout-temp" deviceset="NRF52832" device=""/>
+<part name="U6" library="nrf52832-breakout-temp" deviceset="NRF52832" device="" override_package3d_urn="urn:adsk.eagle:package:22219961/2" override_package_urn="urn:adsk.eagle:footprint:22219962/1"/>
 <part name="E1" library="SparkFun-RF" deviceset="ANTENNA-GROUNDED" device="TRACE-15.2MM" value="ANT"/>
-<part name="Y1" library="nrf52832-breakout-temp" deviceset="CRYSTAL-32MHZ" device="-SMD-2.0X1.6MM" value="32MHz"/>
+<part name="Y1" library="nrf52832-breakout-temp" deviceset="CRYSTAL-32MHZ" device="-SMD-2.0X1.6MM" override_package3d_urn="urn:adsk.eagle:package:22219997/2" override_package_urn="urn:adsk.eagle:footprint:22219998/1" value="32MHz"/>
 <part name="PAD1" library="Wirepad" deviceset="SMD2" device="" package3d_urn="urn:adsk.eagle:package:30839/1"/>
 <part name="PAD4" library="Wirepad" deviceset="SMD2" device="" package3d_urn="urn:adsk.eagle:package:30839/1"/>
 <part name="SUPPLY9" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="PE" device=""/>
@@ -28495,7 +28491,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="PAD2" library="Wirepad" deviceset="SMD5" device="" package3d_urn="urn:adsk.eagle:package:30841/1"/>
 <part name="PAD6" library="Wirepad" deviceset="SMD5" device="" package3d_urn="urn:adsk.eagle:package:30841/1"/>
 <part name="PAD3" library="Wirepad" deviceset="SMD5" device="" package3d_urn="urn:adsk.eagle:package:30841/1"/>
-<part name="U1" library="MP100LGN-P" deviceset="MP100LG" device=""/>
+<part name="U1" library="MP100LGN-P" deviceset="MP100LG" device="" override_package3d_urn="urn:adsk.eagle:package:22219955/2" override_package_urn="urn:adsk.eagle:footprint:22219956/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -28939,8 +28935,8 @@ OUTPUT</text>
 <attribute name="VALUE" x="303.53" y="171.45" size="1.778" layer="96" rot="MR180" align="top-left"/>
 </instance>
 <instance part="E1" gate="G$1" x="375.92" y="69.85" smashed="yes">
-<attribute name="NAME" x="384.81" y="68.072" size="1.778" layer="95" font="vector" rot="MR0"/>
-<attribute name="VALUE" x="384.81" y="65.786" size="1.778" layer="96" font="vector" rot="MR0"/>
+<attribute name="NAME" x="374.015" y="72.263" size="1.778" layer="95" font="vector" rot="MR180"/>
+<attribute name="VALUE" x="374.015" y="74.549" size="1.778" layer="96" font="vector" rot="MR180"/>
 </instance>
 <instance part="Y1" gate="G$1" x="210.185" y="62.865" smashed="yes" rot="MR0">
 <attribute name="NAME" x="210.185" y="67.183" size="1.778" layer="95" rot="MR180" align="bottom-center"/>
@@ -29759,6 +29755,11 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
+</note>
+<note version="9.4" severity="warning">
+Since Version 9.4, EAGLE supports the overriding of 3D packages
+in schematics and board files. Those overridden 3d packages
+will not be understood (or retained) with this version.
 </note>
 <note version="8.4" severity="warning">
 Since Version 8.4, EAGLE supports properties for SPICE simulation. 
