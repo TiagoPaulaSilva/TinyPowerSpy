@@ -14,7 +14,7 @@ Tiny PowerSpy is an IoT device, a smart plug for energy monitoring in wall outle
 <p align="center"><img src="https://github.com/TiagoPaulaSilva/TinyPowerSpy/blob/master/Others/Enclosure%20Preview.png" width="100%" height="100%"></p>
 
 ## Schematic
-<img src="" width="100%" height="100%">
+<img src="https://github.com/TiagoPaulaSilva/TinyPowerSpy/blob/master/Others/Schematic%20Preview.png" width="100%" height="100%">
 
 ### Contributing
 0. Give this project a :star:
