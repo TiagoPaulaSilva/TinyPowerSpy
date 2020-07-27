@@ -28482,7 +28482,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="PN" value="RC0603DR-07200KL"/>
 </part>
 <part name="U4" library="nrf52832-breakout-temp" deviceset="NRF52832" device="" override_package3d_urn="urn:adsk.eagle:package:22219961/2" override_package_urn="urn:adsk.eagle:footprint:22219962/1"/>
-<part name="E1" library="SparkFun-RF" deviceset="ANTENNA-GROUNDED" device="TRACE-15.2MM" value="ANT"/>
+<part name="E1" library="SparkFun-RF" deviceset="ANTENNA-GROUNDED" device="TRACE-15.2MM" override_package3d_urn="urn:adsk.eagle:package:22258636/2" override_package_urn="urn:adsk.eagle:footprint:22258637/1" value="ANT"/>
 <part name="Y1" library="nrf52832-breakout-temp" deviceset="CRYSTAL-32MHZ" device="-SMD-2.0X1.6MM" override_package3d_urn="urn:adsk.eagle:package:22219997/2" override_package_urn="urn:adsk.eagle:footprint:22219998/1" value="32MHz"/>
 <part name="PAD3" library="Wirepad" deviceset="SMD2" device="" package3d_urn="urn:adsk.eagle:package:30839/1"/>
 <part name="PAD5" library="Wirepad" deviceset="SMD2" device="" package3d_urn="urn:adsk.eagle:package:30839/1"/>
