@@ -8,7 +8,7 @@ Tiny PowerSpy is an IoT device, a smart plug for energy monitoring in wall outle
 * [BitsTunnel](https://github.com/TiagoPaulaSilva/BitsTunnel)
 
 ## PCB Preview
-<img src="" width="100%" height="100%">
+<img src="https://github.com/TiagoPaulaSilva/TinyPowerSpy/blob/master/Others/PCB%20Preview.PNG" width="50%" height="50%">
 
 ## Enclosure Preview
 <p align="center"><img src="https://github.com/TiagoPaulaSilva/TinyPowerSpy/blob/master/Others/Enclosure%20Preview.png" width="100%" height="100%"></p>
